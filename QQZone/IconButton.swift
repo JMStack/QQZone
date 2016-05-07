@@ -10,7 +10,7 @@ import UIKit
 
 class IconButton: UIButton, UIViewisPortrait {
     func isPortrait() -> Bool {
-        guard let _ = superview else {
+        guard let superview = superview else {
             return true
         }
         return ((superview as? UIViewisPortrait)?.isPortrait())!

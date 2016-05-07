@@ -40,7 +40,10 @@ class DockView: UIView, UIViewisPortrait{
     }
     
     func isPortrait() -> Bool {
-         return ((superview as? UIViewisPortrait)?.isPortrait())!
+        guard let superview = superview else {
+            return true
+        }
+        return ((superview as? UIViewisPortrait)?.isPortrait())!
     }
 }
 

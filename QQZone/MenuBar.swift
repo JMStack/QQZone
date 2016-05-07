@@ -24,6 +24,9 @@ class MenuBar: UIView, UIViewisPortrait {
     }
     
     func isPortrait() -> Bool {
+        guard let superview = superview else {
+            return true
+        }
         return ((superview as? UIViewisPortrait)?.isPortrait())!
     }
     

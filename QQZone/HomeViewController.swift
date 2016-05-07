@@ -20,6 +20,11 @@ class HomeViewController: BasicViewController {
     override func loadView() {
         view = HomePageView()
         view.backgroundColor = globalBackgroudColor
+        
+        // 根控制器View上添加Switch用于测试
+        let switchView = UISwitch()
+        switchView.frame.origin = CGPoint(x: 100, y: 20)
+        contentView.addSubview(switchView)
     }
     
     override func viewDidLoad() {
